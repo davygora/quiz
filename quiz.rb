@@ -23,11 +23,13 @@ class Quiz
       coverage = row.at("td[6]").text.strip
 
       result.store(date,
-        { tests: tests,
-        passes: passes,
-        failures: failures,
-        pending: pending,
-        coverage: coverage }
+        {
+          tests: tests,
+          passes: passes,
+          failures: failures,
+          pending: pending,
+          coverage: coverage
+        }
       )
     end
     result
