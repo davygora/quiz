@@ -14,7 +14,7 @@ class Quiz
     doc = page_reports.parser
 
     result = {}
-    doc.search("//table/tbody/tr").collect do |row|
+    doc.search("//table/tbody/tr").each do |row|
       date     = row.at("td[1]").text.strip
       tests    = row.at("td[2]").text.strip
       passes   = row.at("td[3]").text.strip
